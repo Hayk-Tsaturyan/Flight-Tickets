@@ -1,0 +1,123 @@
+.transfers-title {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.checkbox-wrapper {
+    border-radius: 5px;
+    height: 35px;
+    padding: 5px 0 5px 10px;
+}
+
+.checkbox-wrapper:hover {
+    background-color: rgb(235, 246, 251);
+}
+
+.checkbox-label {
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+    height: 25px;
+    margin-bottom: 15px;
+    padding: 10px 0 10px 35px;
+    position: relative;
+}
+
+.checkbox-label input[type=checkbox] {
+    visibility: hidden;
+}
+
+.checkbox-container {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid rgb(217, 205, 205);
+    height: 25px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 25px;
+}
+
+.checkbox-label:hover {
+    background-color: rgb(235, 246, 251);
+}
+
+.checkbox-label:hover input~.checkbox-container {
+    border: 2px solid rgb(62, 175, 240);
+}
+
+.checkbox-label input:checked~.checkbox-container {
+    border: 2px solid rgb(62, 175, 240);
+}
+
+.checkbox-container::after {
+    content: "";
+    position: absolute;
+    border: solid rgb(62, 175, 240);
+    border-width: 0 2px 2px 0;
+    display: none;
+    height: 12px;
+    left: 7px;
+    top: 1px;
+    width: 6px;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:checked~.checkbox-container::after {
+    display: block;
+}
+
+@media only screen and (max-width: 920px) {
+    .transfers-title {
+        font-size: 12px;
+    }
+
+    .checkbox-label {
+        font-size: 12px;
+        height: 20px;
+        padding-left: 25px;
+    }
+
+    .checkbox-container {
+        height: 20px;
+        width: 20px;
+    }
+
+    .checkbox-container::after {
+        height: 8px;
+        left: 5px;
+        top: 2px;
+        width: 4px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .transfers-title {
+        font-size: 8px;
+    }
+
+    .checkbox-label {
+        font-size: 8px;
+        height: 15px;
+        padding-left: 20px;
+        padding-top: 8px;
+    }
+
+    .checkbox-container {
+        height: 15px;
+        width: 15px;
+    }
+
+    .checkbox-container::after {
+        height: 6px;
+        left: 3px;
+        top: 1px;
+        width: 3px;
+    }
+
+    .checkbox-wrapper {
+        height: 25px;
+    }
+}

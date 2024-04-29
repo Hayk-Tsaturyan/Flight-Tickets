@@ -1,0 +1,7 @@
+.filters-container {
+    border-radius: 10px;
+    border: 2px solid rgb(217, 205, 205);
+    padding: 10px 0;
+    position: fixed;
+    width: 25%;
+}

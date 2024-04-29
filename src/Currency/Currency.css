@@ -1,0 +1,78 @@
+.currency-container {
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.currency-title {
+    margin-bottom: 10px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+}
+
+.currency-button {
+    background: none;
+    border: 2px solid rgb(217, 205, 205);
+    cursor: pointer;
+    width: 100%;
+}
+
+.currency-button:first-child {
+    border-bottom-left-radius: 10px;
+    border-right: hidden;
+    border-top-left-radius: 10px;
+}
+
+.currency-button:last-child {
+    border-bottom-right-radius: 10px;
+    border-left: hidden;
+    border-top-right-radius: 10px;
+}
+
+.currency-button:not(:first-child, :last-child) {
+    border-left: 1px solid rgb(217, 205, 205);
+    border-right: 1px solid rgb(217, 205, 205);
+}
+
+.currency-button:hover {
+    background-color: rgb(235, 246, 251);
+    border: 2px solid rgb(62, 175, 240);
+}
+
+.currency-button:focus {
+    background-color: rgb(62, 175, 240);
+    border: 2px solid rgb(62, 175, 240);
+    color: #fff;;
+}
+
+@media only screen and (max-width: 920px) {
+    .buttons-container {
+        height: 40px;
+    }
+
+    .currency-title {
+        font-size: 12px;
+    }
+
+    .currency-button {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .buttons-container {
+        height: 30px;
+    }
+
+    .currency-title {
+        font-size: 8px;
+    }
+
+    .currency-button {
+        font-size: 8px;
+    }
+}
